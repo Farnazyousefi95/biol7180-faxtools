@@ -51,3 +51,14 @@ FASTA is a standard format for biological sequences (e.g., amplicons, reference 
 
 A public GitHub repository containing code, tests, example input files, and documentation sufficient for classmates to run the tool and reproduce example outputs without live assistance.
 
+
+# Feedback
+
+This sounds like a great project for class.
+If you would like to avoid dependencies to help you learn to write more Python
+code, that is great.
+However, if you decide to use existing Python tools to help facilitate the
+functionality of your script, some potential options are
+[Biopython](https://biopython.org/)
+and
+[DendroPy](https://jeetsukumaran.github.io/DendroPy/).
