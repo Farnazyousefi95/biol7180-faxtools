@@ -91,7 +91,7 @@ biol7180-faxtools/
 
 ## Requirements
 
-- **Python 3.8** or newer (tested on 3.10 and 3.12)
+- **Python 3.8** or newer (tested on 3.14)
 - No external packages — only the Python standard library is used.
 
 ## Installation
