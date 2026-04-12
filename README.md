@@ -271,6 +271,13 @@ The code was written to follow the best practices taught in BIOL 7180:
 
 ---
 
+## Acknowledgments
+AI assistance (Claude, Anthropic) was used to help refine the code structure,
+write unit tests, improve documentation, and prepare the presentation materials.
+All code was reviewed, tested, and understood by the author.
+
+---
+
 ## License
 
 This project was developed for educational purposes as part of BIOL 7180 at
