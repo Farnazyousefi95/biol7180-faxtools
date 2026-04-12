@@ -26,7 +26,7 @@
 10. [Code Design and Best Practices](#code-design-and-best-practices)  
 11. [Limitations and Future Work](#limitations-and-future-work)  
 12. [License](#license)
-
+13. [Acknowledgments](#Acknowledgments)
 ---
 
 ## Project Overview
@@ -271,17 +271,18 @@ The code was written to follow the best practices taught in BIOL 7180:
 
 ---
 
-## Acknowledgments
-AI assistance (Claude, Anthropic) was used to help refine the code structure,
-write unit tests, improve documentation, and prepare the presentation materials.
-All code was reviewed, tested, and understood by the author.
-
----
-
 ## License
 
 This project was developed for educational purposes as part of BIOL 7180 at
 Auburn University. Feel free to use and modify it for your own work.
+
+---
+
+## Acknowledgments
+
+AI assistance (Claude, Anthropic) was used to help refine the code structure,
+write unit tests, improve documentation, and prepare the presentation materials.
+All code was reviewed, tested, and understood by the author.
 
 ---
 
