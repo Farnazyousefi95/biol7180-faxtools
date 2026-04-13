@@ -1,11 +1,11 @@
-# Everything in Your Code, Explained
+# Everything in My Code, Explained
 
 ---
 
 ## PART 1: MODULES (the import statements at the top)
 
 Every Python script starts by importing modules. These are like toolboxes
-that give you pre-built functionality.
+that gives us pre-built functionality.
 
 ### import argparse
 
@@ -553,102 +553,7 @@ know where faxtools.py is. This ensures it always finds it.
 
 ---
 
-## PART 4: __init__.py EXPLAINED
-
-**What it is:** An empty file placed inside the `tests/` folder.
-
-**Why you need it:** In Python, a folder is just a folder. Python does
-NOT treat it as a package (a collection of importable modules) unless
-it contains an `__init__.py` file.
-
-Without it:
-```
-tests/
-    test_faxtools.py     <- Python can't find this
-```
-
-With it:
-```
-tests/
-    __init__.py          <- This tells Python "tests is a package"
-    test_faxtools.py     <- Now Python can import tests.test_faxtools
-```
-
-**That's why your tests didn't run at first.** When you ran
-`python3 -m unittest -v`, Python looked for test packages. It saw the
-`tests/` folder but without `__init__.py`, it didn't recognize it as a
-package and skipped it entirely. The output was "Ran 0 tests." After you
-created the empty `__init__.py` with `touch tests/__init__.py`, Python
-recognized `tests/` as a package and found all 29 tests.
-
-**The file can be completely empty.** Its existence is the signal, not
-its contents.
-
----
-
-## PART 5: N50 and N90 EXPLAINED
-
-These are statistics used to evaluate **genome assembly quality.**
-
-### The concept
-
-Imagine you assembled a genome and got these contigs (sorted longest
-to shortest):
-
-```
-Contig A: 500 bp
-Contig B: 300 bp
-Contig C: 200 bp
-Contig D: 100 bp
-Contig E:  50 bp
------------------
-Total:  1,150 bp
-```
-
-### N50
-
-**N50 answers:** "If I line up all contigs from longest to shortest and
-walk along them, at what length do I cross the 50% mark of total bases?"
-
-Walk through:
-- After Contig A (500 bp): covered 500 / 1150 = 43% ... not at 50% yet
-- After Contig B (300 bp): covered 800 / 1150 = 70% ... crossed 50%!
-
-**N50 = 300 bp** (the length of the contig that pushed us past 50%).
-
-### N90
-
-Same idea but with the 90% mark:
-- After A (500): 43%
-- After B (300): 70%
-- After C (200): 87%
-- After D (100): 96% ... crossed 90%!
-
-**N90 = 100 bp**
-
-### Why these matter
-
-**Higher N50 = better assembly.** It means your contigs are longer, so
-you reconstructed the genome in fewer, larger pieces.
-
-A genome assembly with N50 = 5,000,000 bp (5 Mb) is excellent — the
-contigs are very long. An assembly with N50 = 500 bp is poor — you have
-thousands of tiny fragments.
-
-**N90** tells you about the "worst" portion of your assembly. It's
-always smaller than N50.
-
-### Why your project mentions them
-
-In the "Limitations and Future Work" slide, you say N50/N90 could be
-added. This would make faxtools useful for evaluating genome assemblies,
-not just basic FASTA QC. You didn't implement them because they weren't
-needed for the MVP (minimum viable product), but they'd be a logical
-next feature.
-
----
-
-## PART 6: OTHER PYTHON CONCEPTS IN YOUR CODE
+## PART 4: OTHER PYTHON CONCEPTS IN YOUR CODE
 
 ### Tuples
 ```python
